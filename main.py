@@ -3,7 +3,7 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import Pinecone as pine
 from dotenv import load_dotenv
-from openai import OpenAI
+from langchain import VectorDBQA, OpenAI
 from pinecone import Pinecone
 from langchain.chains import RetrievalQA
 
@@ -27,5 +27,12 @@ if __name__ == "__main__":
     )
 
     qa = RetrievalQA.from_chain_type(
-        llm=OpenAI(), chain_type="stuff", retriever=docsearch.as_retriever()
+        llm=OpenAI(),
+        chain_type="stuff",
+        retriever=docsearch.as_retriever(),
+        return_source_documents=True,
     )
+
+    query = "What is a vector DB? Give me a 15 word answer for a beginner"
+    result = qa({"query": query})
+    print(result)
