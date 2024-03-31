@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 from langchain.document_loaders import PyPDFLoader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings
+from langchain.vectorstores import FAISS
 load_dotenv()
 
 if __name__ == "__main__":
@@ -14,4 +15,5 @@ if __name__ == "__main__":
     docs = text_splitter.split_documents(documents=documents)
 
     embeddings = OpenAIEmbeddings()
-    
+    vectorStore = FAISS.from_documents(docs, embeddings)
+    vectorStore.save_local("faiss_index_react")
