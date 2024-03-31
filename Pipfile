@@ -9,6 +9,7 @@ black = "*"
 pinecone-client = "*"
 python-dotenv = "*"
 openai = "*"
+tiktoken = "*"
 
 [dev-packages]
 
