@@ -11,6 +11,7 @@ python-dotenv = "*"
 openai = "*"
 tiktoken = "*"
 pypdf = "*"
+faiss-cpu = "*"
 
 [dev-packages]
 
