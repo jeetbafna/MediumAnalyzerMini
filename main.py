@@ -19,5 +19,5 @@ if __name__ == "__main__":
     print(len(texts))
 
     embeddings = OpenAIEmbeddings(openai_api_key=os.environ.get("OPENAI_API_KEY"))
-
+    docsearch = Pinecone.from_documents(texts,embeddings, index="medium-blog-embeddings-index")
 
