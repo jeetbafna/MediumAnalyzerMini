@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../ice_breaker/.idea/ice_breaker.iml" filepath="$PROJECT_DIR$/../ice_breaker/.idea/ice_breaker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../react-langchain/.idea/react-langchain.iml" filepath="$PROJECT_DIR$/../react-langchain/.idea/react-langchain.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/vector.iml" filepath="$PROJECT_DIR$/.idea/vector.iml" />
     </modules>
   </component>

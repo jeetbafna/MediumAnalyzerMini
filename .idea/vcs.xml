@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../ice_breaker" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../react-langchain" vcs="Git" />
   </component>
 </project>
