@@ -10,6 +10,7 @@ pinecone-client = "*"
 python-dotenv = "*"
 openai = "*"
 tiktoken = "*"
+pypdf = "*"
 
 [dev-packages]
 
